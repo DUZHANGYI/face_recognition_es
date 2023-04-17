@@ -56,6 +56,3 @@ logs/
 **/.iml
 **/*.iml
 */*.iml
-
-**/LoyGameDB/*
-**/LoyTaskGameDB/*
