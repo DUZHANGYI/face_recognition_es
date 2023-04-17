@@ -15,5 +15,5 @@ ear_counter_frames_min = 1
 ear_counter_frames_max = 5
 # 采集次数
 gather_num = 4
-# 检测间隔
-heartbeat_interval = 1
+# 检测间隔 秒
+heartbeat_interval = 2
