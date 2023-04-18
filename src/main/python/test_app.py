@@ -8,6 +8,10 @@ import face_recognizer
 from utils import es_util
 
 
+def test_create_index():
+    es_util.create_index()
+
+
 def test_put_face():
     names_pkl_path = '../resources/db/face_names.pkl'
     encodings_pkl_path = '../resources/db/face_encodings.pkl'

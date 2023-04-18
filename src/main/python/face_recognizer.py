@@ -14,8 +14,7 @@ facerec = dlib.face_recognition_model_v1(biopsy_config.resnet_model_path)
 def _get_face_feat(img_x, box):
     rec = dlib.rectangle(*box)
     shape = sp(img_x, rec)
-    feat = facerec.compute_face_descriptor(img_x, shape)
-    return feat
+    return facerec.compute_face_descriptor(img_x, shape)
 
 
 def face_distance(face_encodings, face_to_compare):

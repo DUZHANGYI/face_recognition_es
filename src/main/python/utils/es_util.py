@@ -7,6 +7,23 @@ from config import es_config
 es = Elasticsearch(es_config.elasticsearch_url)
 
 
+def create_index():
+    mappings = {
+        "properties": {
+            "face_name": {
+                "type": "keyword"
+            },
+            "face_encoding": {
+                "type": "dense_vector",
+                "dims": 128
+            }
+        }
+    }
+    # 创建索引
+    response = es.indices.create(index=es_config.es_index, mappings=mappings)
+    return response
+
+
 def put_face(face_name, face_encoding):
     doc = {
         es_config.face_name_filed: face_name,
