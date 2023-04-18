@@ -14,3 +14,12 @@ python dlib 人脸识别，使用elasticsearch储存人脸数据
 1. 安装完所需包之后启动ES,执行test_app.py中的test_create_index方法创建一个faces索引
 2. 执行test_app.py中的test_put_face方法向ES中插入数据（大概1000条数据）
 3. 最后执行face_biopsy_rec.py进行人脸比对
+
+### 其他
+
+1. 可在config目录下的es_config.py更改ES的连接
+2. 可在config目录下的biopsy_config.py更改活体检测相关的配置
+
+### 关于目录结构
+
+这结构一看就是Java程序员
