@@ -3,7 +3,8 @@ import numpy as np
 import onnxruntime
 
 from config import biopsy_config
-from utils.detector_util import generate_anchors, decode_bbox, single_class_non_max_suppression
+from utils.detector_util import (decode_bbox, generate_anchors,
+                                 single_class_non_max_suppression)
 
 # load the model
 ort_session = onnxruntime.InferenceSession(biopsy_config.onnxruntime_path)
