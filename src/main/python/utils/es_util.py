@@ -1,8 +1,7 @@
 import traceback
 
-from elasticsearch import Elasticsearch, exceptions
-
 from config import es_config
+from elasticsearch import Elasticsearch, exceptions
 
 es = Elasticsearch(es_config.elasticsearch_url)
 
@@ -10,10 +9,10 @@ es = Elasticsearch(es_config.elasticsearch_url)
 def create_index():
     mappings = {
         "properties": {
-            "face_name": {
+            es_config.face_name_filed: {
                 "type": "keyword"
             },
-            "face_encoding": {
+            es_config.face_encoding_filed: {
                 "type": "dense_vector",
                 "dims": 128
             }
