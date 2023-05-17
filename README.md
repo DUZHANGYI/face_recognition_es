@@ -19,7 +19,3 @@ python dlib 人脸识别，使用elasticsearch储存人脸数据
 
 1. 可在config目录下的es_config.py更改ES的连接
 2. 可在config目录下的biopsy_config.py更改活体检测相关的配置
-
-### 关于目录结构
-
-这结构一看就是Java程序员
